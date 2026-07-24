@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アニメサンド (anime sando)</title>
+    <link rel="stylesheet" href="css/stleys.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="marquee-container">
+                <div class="marquee-text">
+                    <h1>アニメサンド (anime sando)</h1>
+                </div>
+            </div>
+            <h2>¡Arte, Sabor y Crujiente Pasión!</h2>
+            <h3>“Alimenta tu día, inspira tu pasión.”</h3>
+            <p>Descubre nuestra exclusiva colección de pósters únicos con los mejores sándwiches y chicharras.</p>
+        </div>
+    </header>
+
+    <main class="container" id="productos">
+        <h2 class="section-title">Nuestros Productos</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <img src="imagenes/pan.jpg" alt="Sándwiches artesanales">
+                <div class="card-content">
+                    <h3>Sándwiches de Pollo</h3>
+                    <p>Preparados con ingredientes frescos del día, pan, pollo, repollo, mayonesa, especias y un sabor irresistible que te dejará con ganas de más.</p>
+                    <div class="precio">$1.00 la unidad</div>
+                    <div class="order-box">
+                        <input type="number" class="qty-input" min="1" max="10" value="1">
+                        <button class="btn-pedir" onclick="pedirProducto(this, 'Sándwiches de Pollo')">Pedir ahora</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/chicharras.jpg" alt="Chicharrones crujientes">
+                <div class="card-content">
+                    <h3>Chicharras</h3>
+                    <p>Preparadas o solas con ese toque crujiente y salado dándote satisfacción al probarlas.</p>
+                    <div class="precio">$0.35 la unidad</div>
+                    <div class="order-box">
+                        <input type="number" class="qty-input" min="1" max="10" value="1">
+                        <button class="btn-pedir" onclick="pedirProducto(this, 'Chicharras')">Pedir ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Posters</h2>
+        <div class="grid">
+            <div class="card" data-id="doctor-stone">
+                <img class="poster" src="imagenes/venta/BNH/983684743601116459.jpg" alt="Poster My Hero Academia">
+                <div class="card-content">
+                    <h3>My Hero Academia</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'My Hero Academia')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="demon-slayer">
+                <img class="poster" src="imagenes/venta/BNH/descargar.jpg" alt="Poster Izuku Midoriya">
+                <div class="card-content">
+                    <h3>Izuku Midoriya</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Izuku Midoriya')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" >
+                <img class="poster" src="imagenes/venta/BNH/Katsuki Bakugo.jpg" alt="Poster Katsuki Bakugo">
+                <div class="card-content">
+                    <h3>Katsuki Bakugo</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Katsuki Bakugo')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="My Hero Academia (final)">
+                <img class="poster" src="imagenes/venta/BNH/My Hero Academia _ Anime Icon & Wallaper.jpg" alt="Poster My Hero Academia (final)">
+                <div class="card-content">
+                    <h3>My Hero Academia (final)</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'My Hero Academia (final)')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="rezero">
+                <img class="poster" src="imagenes/venta/BNH/Todoroki Shoto _ My Hero Academia.jpg" alt="Poster Shoto Todoroki">
+                <div class="card-content">
+                    <h3>Shoto Todoroki</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Shoto Todoroki')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="sao">
+                <img class="poster" src="imagenes/venta/DR.STONE/Chrome ねぎとろ on Pixiv.jpg" alt="Poster Chrome">
+                <div class="card-content">
+                    <h3>Chrome</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Chrome')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="titan">
+                <img class="poster" src="imagenes/venta/DR.STONE/I love him  ⋆⁺₊⋆ ☾ ⋆⁺₊⋆.jpg" alt="Poster Senku Ishigami">
+                <div class="card-content">
+                    <h3>Senku Ishigami</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Senku Ishigami')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/DR.STONE/Xeno Houston Wingfield │ Dr_Stone │ ドクターストーン.jpg" alt="Poster  Dr. Xeno">
+                <div class="card-content">
+                    <h3> Dr. Xeno</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, ' Dr. Xeno')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/KMY/Cosplay Costumes, Cosplay Shoes, Cosplay Wigs Latest & Greatest - CosplayClass_.jpg" alt="Kyōjurō Rengoku">
+                <div class="card-content">
+                    <h3>Kyōjurō Rengoku</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Kyōjurō Rengoku')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/KMY/descargar.jpg" alt="Poster Muzan Kibutsuji">
+                <div class="card-content">
+                    <h3>Muzan Kibutsuji</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Muzan Kibutsuji')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/KMY/Giyuu Tomioka, from Demon slayer.jpg" alt="Poster Giyū Tomioka">
+                <div class="card-content">
+                    <h3>Giyū Tomioka</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Giyū Tomioka')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/KMY/TANJIRO KAMADO.jpg" alt="Poster Tanjiro Kamado">
+                <div class="card-content">
+                    <h3>Tanjiro Kamado</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Tanjiro Kamado')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/RE.ZERO/descargar.jpg" alt="Poster Ram y Rem">
+                <div class="card-content">
+                    <h3>Ram y Rem</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Ram y Rem')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/RE.ZERO/NATSUKI SUBARU.jpg" alt="Subaru Natsuki">
+                <div class="card-content">
+                    <h3>Subaru Natsuki</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Subaru Natsuki')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/RE.ZERO/Rem Subaru Emilia.jpg" alt="Poster Subaru Natsuki y rem">
+                <div class="card-content">
+                    <h3>Subaru Natsuki y rem</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Subaru Natsuki y rem')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/SAO/4433299629511073.jpg" alt="Poster Kirito y Asuna">
+                <div class="card-content">
+                    <h3>°Kirito y Asuna</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, '°Kirito y Asuna')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/SAO/45036065019186071.jpg" alt="Poster Kirito">
+                <div class="card-content">
+                    <h3>Kirito</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Kirito y Asuna')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/SAO/5840674511208773.jpg" alt="Poster Kirito y Asuna">
+                <div class="card-content">
+                    <h3>Kirito y Asuna</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Kirito y Asuna')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/SAO/Sinon❤.jpg" alt="Poster Shino Asada">
+                <div class="card-content">
+                    <h3>Shino Asada</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Shino Asada')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/SNK/944630090577917987.jpg" alt="Poster Eren Yeager">
+                <div class="card-content">
+                    <h3>Eren Yeager</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Eren Yeager')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/SNK/Levi Ackerman.jpg" alt="Eren Yeager">
+                <div class="card-content">
+                    <h3>Levi</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Levi')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/SNK/Shingeki no Kyojin ( attack on titan ).jpg" alt="Poster Attack on Titan">
+                <div class="card-content">
+                    <h3>Attack on Titan</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Attack on Titan')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/TKG/descargar (1).jpg" alt="Poster Touka Kirishima">
+                <div class="card-content">
+                    <h3>Touka Kirishima</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Touka Kirishima')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/TKG/descargar (2).jpg" alt="Poster Tokyo Ghoul">
+                <div class="card-content">
+                    <h3>Tokyo Ghoul</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Tokyo Ghoul')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/TKG/descargar.jpg" alt="Poster Ken Kaneki">
+                <div class="card-content">
+                    <h3>Ken Kaneki</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Ken Kaneki')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/TKR/Kazutora 💛.jpg" alt="Poster Kazutora Hanemiya">
+                <div class="card-content">
+                    <h3>Kazutora Hanemiya</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Kazutora Hanemiya')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/TKR/「 asanφ 」.jpg" alt="Poster Draken">
+                <div class="card-content">
+                    <h3>Draken</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Draken')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="tokyo-revengers">
+                <img class="poster" src="imagenes/venta/TKR/𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋 𝐀𝐑𝐓𝐒༘ __ Tokyo Revengers_.jpg" alt="Poster Tokyo Revengers">
+                <div class="card-content">
+                    <h3>Tokyo Revengers</h3>
+                    <p>Decora tu cuarto o zona preferida con estos posters de calidad con el tamaño de 30,48 cm de ancho x 45,72 cm de largo.</p>
+                    <div class="card-footer-info">
+                        <div class="precio">$2.25 la unidad</div>
+                        <div class="stock">Disponible: <span class="stock-num">1</span></div>
+                    </div>
+                    <div class="order-box" style="margin-top: 15px;">
+                        <input type="hidden" class="qty-input promo-qty" value="1">
+                        <button class="btn-pedir" onclick="pedirPosterDesdePromo(this, 'Tokyo Revengers')">Llevar este </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2  >Para confirmar su compra debe de mandar captura de lo que pidio a una de las 2 redes sociales para apartarselo mejor y tenerlo bien guardado para ti.</h2>
+        
+        <h2 class="section-title">Redes Sociales</h2>
+        <div class="social-grid">
+            <div class="social-card">
+                <img class="red" src="imagenes/tik tok.png" alt="TikTok">
+                <div class="link">
+                    <a href="https://www.tiktok.com/@animesando556?_r=1&_t=ZS-97v3tRV8niP" target="_blank">Ir a TikTok</a>
+                </div>
+            </div>
+            <div class="social-card">
+                <img class="red" src="imagenes/insta.jpg" alt="Instagram">
+                <div class="link">
+                    <a href="https://www.instagram.com/anime_sando556/" target="_blank">Ir a Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="fecha">
+            <p>Primera modificación: 21/07/2026 a las 11:40 AM</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img class="footer-logo" src="imagenes/WhatsApp Image 2026-07-10 at 9.07.32 AM.jpeg" alt="Logo Anime Sando">
+            <p> 2026 Promociones Exclusivas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
