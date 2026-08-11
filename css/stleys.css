@@ -1,4 +1,4 @@
-/* ==========================================
+   /* ==========================================
    1. ESTILOS GLOBALES
    ========================================== */
 * {
@@ -188,6 +188,7 @@ header {
     color: #888;
 }
 
+
 /* ==========================================
    5. BOTONES Y FORMULARIOS DE PEDIDO
    ========================================== */
@@ -223,8 +224,16 @@ header {
     background-color: #d906ab;
 }
 
+.agotado{
+    background: #ccc;
+    cursor: not-allowed;
+}
+.agotado:hover{
+    background: #666;
+}
+
 /* ==========================================
-   6. REDES SOCIALES
+    6. REDES SOCIALES
    ========================================== */
 .social-grid {
     display: flex;
